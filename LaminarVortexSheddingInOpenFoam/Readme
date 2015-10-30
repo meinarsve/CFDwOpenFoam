@@ -24,4 +24,5 @@ Pay special attention to the files:
 
 * -- system/controlDict -- Where you change the timestep, tolerance, simulation time etc
 
-
+A video tutorial on how to set up the case may be found at:
+https://www.youtube.com/watch?v=aIvDtyAYnI8
