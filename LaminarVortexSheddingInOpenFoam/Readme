@@ -1,9 +1,11 @@
-This is a tutorial to simulate laminar vortex shedding across
-a 2D cylinder. Laminar vortex shedding occurs for Reynolds numbers
+This is a tutorial on how to simulate laminar vortex shedding across
+a 2D cylinder in OpenFoam. Laminar vortex shedding occurs for Reynolds numbers
 50 < Re < 200 and the wake becomes turbulent for 200 < Re < 300, 
 so make sure the simulation satisfies this criteria.
 
-The solver used is icoFoam which is laminar, Newtonian, transient solver.
+The solver used is pisoFoam which is generally a solver used for
+turbulent, transient flow. However the turbulence is turned off
+in this simulation as we want to simulate laminar flow.
 
 Pay special attention to the files:
 
@@ -21,3 +23,5 @@ Pay special attention to the files:
                                   constant/U and constant/p files
 
 * -- system/controlDict -- Where you change the timestep, tolerance, simulation time etc
+
+
