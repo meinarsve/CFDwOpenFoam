@@ -1,6 +1,7 @@
-In this tutorial we solve for laminar Poiseuille flow through a pipe.
+In this tutorial we solve for laminar Poiseuille flow through a pipe in OpenFoam
 We only mesh a small wedge-section of the pipe and utilize the wedge 
 boundary condition to save computational time. 
+The case is solved with simpleFoam
 Pay extra attention to the entrace length which is given as 
 L_E = 0.05 * D * Re_D
-And see if the solution satisfies this.
+And see for example if the solution satisfies this.

@@ -10,3 +10,7 @@ Contents:
 	See LaminarVortexShedding.pdf for a full report including pre/post processing
    	Mesh is created in gmsh
 
+
+*   LaminarPipeFlow
+	Case folder for simulation of Laminar Poiseuille flow through a pipe
+	Mesh is created in gmsh
