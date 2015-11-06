@@ -1,0 +1,3 @@
+In this tutorial we solve for laminar Poiseuille flow through a pipe.
+We only mesh a small wedge-section of the pipe and utilize the wedge 
+boundary condition to save computational time.
