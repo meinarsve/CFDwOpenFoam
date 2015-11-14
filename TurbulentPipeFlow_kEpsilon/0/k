@@ -1,0 +1,56 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.4.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      k;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+// Turbulent Intensity I = u'/U_avg
+// 
+// I = 0.16*Re**(-1/8), valid for the core of pipe flow 
+// This gives turbulent intensity I = 0.16*10000**(-1/8) = 0.0506
+//
+// k = (3/2)*(I*U_avg)**2, U_avg = 1m/s --> k = 3.84e-3
+//
+ 
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform 0.00384;
+
+boundaryField
+{
+    inlet
+    {
+        type            fixedValue;
+        value           uniform 0.00384;
+    }
+    outlet
+    {
+        type            zeroGradient;
+    }
+    pipeWall
+    {
+        type            kqRWallFunction;
+        value           uniform 0.00384;
+    }
+    wedge0
+    {
+        type            wedge;
+    }
+    wedge1
+    {
+        type            wedge;
+    }
+}
+
+
+// ************************************************************************* //
