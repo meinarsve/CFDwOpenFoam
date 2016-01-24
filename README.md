@@ -15,9 +15,8 @@ Contents:
 	Case folder for simulation of Laminar Poiseuille flow through a pipe
 	Mesh is created in gmsh
 
-*   TurbulentPipeFlow_kEpsilon
-	Case folder for simulation of turbulent pipe flow with the k-epsilon 
+*   squareCylinder_kEpsilon
+	Case folder for simulation of turbulent flow with the k-epsilon 
 	turbulence model. Mesh is created with gmsh. 
-	The solver used is the steady state solver simpleFoam
-	To conntrol and plot residuals in gnuplot from simpleFoam see the resPlot
-	with commands: gnuplot; load "reslot"
+	The solver used is the transient solver pisoFoam
+
